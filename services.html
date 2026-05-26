@@ -5,49 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services & Pricing | Lynne Wilson & Co.</title>
   <meta name="description" content="VA support, marketing strategy, OBM, social media, email marketing and podcast production. Flexible retainers and one-off packages for women-led businesses." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a href="index.html" class="nav-logo">Lynne Wilson <span>&</span> Co.</a>
-  <ul class="nav-links">
-    <li><a href="services.html">Services</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="testimonials.html">Kind Words</a></li>
-    <li><a href="work-with-me.html" class="nav-cta">Work With Me</a></li>
-  </ul>
-  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Lynne Wilson <span>&amp; Co.</span></a>
+    <ul class="nav-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="testimonials.html">Kind Words</a></li>
+      <li><a href="work-with-me.html" class="nav-cta">Work With Me</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
+  </div>
+  <div class="nav-mobile">
+    <ul>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="testimonials.html">Kind Words</a></li>
+      <li><a href="work-with-me.html">Work With Me</a></li>
+    </ul>
+  </div>
 </nav>
-<div class="mobile-menu" id="mobileMenu">
-  <ul>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="testimonials.html">Kind Words</a></li>
-    <li><a href="work-with-me.html" class="nav-cta">Work With Me</a></li>
-  </ul>
-</div>
 
-<!-- PAGE HERO -->
 <section class="page-hero">
   <div class="container">
-    <h1>Services & Pricing</h1>
+    <h1>Services &amp; Pricing</h1>
     <p>Straightforward support for women-led businesses. No fluff, no bloated retainers — just the right help, at the right level.</p>
     <span class="gold-line"></span>
   </div>
 </section>
 
-<!-- PRICING PRINCIPLE -->
 <section class="section-pad">
   <div class="container">
+
     <div class="pricing-principle">
       <p><strong>One thing to know before you read on:</strong> retainers are never discounted. One hour is one hour, regardless of volume. The value of a retainer is guaranteed, direct access to Lynne — not a lower price.</p>
     </div>
 
-    <!-- TIER 1 -->
     <div class="tier">
       <div class="tier-header">
         <h2>Tier 1</h2>
@@ -55,12 +55,7 @@
       </div>
       <p class="tier-description">VA support, admin, email marketing, social media management and content creation.</p>
       <table class="pricing-table">
-        <thead>
-          <tr>
-            <th>Package</th>
-            <th>Price</th>
-          </tr>
-        </thead>
+        <thead><tr><th>Package</th><th>Price</th></tr></thead>
         <tbody>
           <tr><td>Ad hoc</td><td class="price-amount">£37 / hour</td></tr>
           <tr><td>5 hour retainer</td><td class="price-amount">£185 / month</td></tr>
@@ -68,12 +63,11 @@
           <tr><td>20 hour retainer</td><td class="price-amount">£740 / month</td></tr>
           <tr><td>Social Media Audit (one-off)</td><td class="price-amount">£97</td></tr>
           <tr><td>Email Audit (one-off)</td><td class="price-amount">£97</td></tr>
-          <tr><td>Email Setup & Strategy (one-off)</td><td class="price-amount">£185</td></tr>
+          <tr><td>Email Setup &amp; Strategy (one-off)</td><td class="price-amount">£185</td></tr>
         </tbody>
       </table>
     </div>
 
-    <!-- TIER 2 -->
     <div class="tier">
       <div class="tier-header">
         <h2>Tier 2</h2>
@@ -81,12 +75,7 @@
       </div>
       <p class="tier-description">Marketing strategy, OBM, fractional marketing management and podcast production.</p>
       <table class="pricing-table">
-        <thead>
-          <tr>
-            <th>Package</th>
-            <th>Price</th>
-          </tr>
-        </thead>
+        <thead><tr><th>Package</th><th>Price</th></tr></thead>
         <tbody>
           <tr><td>Ad hoc</td><td class="price-amount">£45 / hour</td></tr>
           <tr><td>Strategy Day (one-off)</td><td class="price-amount">£450</td></tr>
@@ -101,7 +90,6 @@
       </table>
     </div>
 
-    <!-- SERVICE DESCRIPTIONS -->
     <div class="services-detail">
       <div class="service-detail-card">
         <h3>Online Business Management</h3>
@@ -164,27 +152,26 @@
         </ul>
       </div>
     </div>
+
   </div>
 </section>
 
-<!-- SERVICES CTA -->
-<section class="services-cta">
+<section class="services-cta-band">
   <div class="container">
     <h2>Not sure which package is right for you?</h2>
     <p>Book a free 30-minute discovery call. We'll talk through where you are, what you need and what working together could look like.</p>
-    <a href="https://calendly.com/lynne-lynnewilson/30min" target="_blank" class="btn btn-gold">Book a Discovery Call</a>
+    <a href="https://calendly.com/lynne-lynnewilson/30min" target="_blank" class="btn btn-secondary">Book a Discovery Call</a>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
+<footer class="footer">
   <div class="container">
     <div class="footer-inner">
-      <div>
-        <div class="footer-logo">Lynne Wilson & Co.</div>
-        <p class="footer-tagline">Helping women in business lead without burning out.</p>
+      <div class="footer-brand">
+        <a href="index.html" class="logo">Lynne Wilson <span>&amp; Co.</span></a>
+        <p>Marketing, VA Support, OBM &amp; Podcast Support<br />for Women-Led Businesses</p>
       </div>
-      <div>
+      <div class="footer-links">
         <h4>Navigate</h4>
         <ul>
           <li><a href="services.html">Services</a></li>
@@ -193,27 +180,26 @@
           <li><a href="work-with-me.html">Work With Me</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Get in Touch</h4>
-        <ul>
-          <li><a href="mailto:lynne@lynnewilson.uk">lynne@lynnewilson.uk</a></li>
-          <li><a href="https://calendly.com/lynne-lynnewilson/30min" target="_blank">Book a discovery call</a></li>
-          <li><a href="https://linkedin.com/in/lynnewilson" target="_blank">LinkedIn</a></li>
-          <li><a href="https://instagram.com/lynnewilsonco" target="_blank">Instagram</a></li>
-        </ul>
+      <div class="footer-contact">
+        <h4>Get In Touch</h4>
+        <a href="mailto:lynne@lynnewilson.uk">lynne@lynnewilson.uk</a>
+        <a href="https://calendly.com/lynne-lynnewilson/30min" target="_blank" class="btn btn-primary btn-small">Book a Call</a>
+        <div class="footer-social">
+          <a href="https://linkedin.com/in/lynnewilson" target="_blank">LinkedIn</a>
+          <a href="https://instagram.com/lynnewilsonco" target="_blank">Instagram</a>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 Lynne Wilson & Co. All rights reserved.</span>
-      <span>Women-led businesses only.</span>
+      <p>&copy; 2026 Lynne Wilson &amp; Co. All rights reserved. | Women-led businesses only.</p>
     </div>
   </div>
 </footer>
 
 <script>
-function toggleMenu() {
-  document.getElementById('mobileMenu').classList.toggle('open');
-}
+  const toggle = document.querySelector('.nav-toggle');
+  const mobileNav = document.querySelector('.nav-mobile');
+  toggle.addEventListener('click', () => mobileNav.classList.toggle('open'));
 </script>
 </body>
 </html>

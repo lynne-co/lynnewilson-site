@@ -5,33 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Lynne Wilson & Co.</title>
   <meta name="description" content="Meet Lynne Wilson — founder, strategist, OBM and yoga nidra guide. Built for women who are brilliant at what they do and exhausted by everything else." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a href="index.html" class="nav-logo">Lynne Wilson <span>&</span> Co.</a>
-  <ul class="nav-links">
-    <li><a href="services.html">Services</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="testimonials.html">Kind Words</a></li>
-    <li><a href="work-with-me.html" class="nav-cta">Work With Me</a></li>
-  </ul>
-  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Lynne Wilson <span>&amp; Co.</span></a>
+    <ul class="nav-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="testimonials.html">Kind Words</a></li>
+      <li><a href="work-with-me.html" class="nav-cta">Work With Me</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
+  </div>
+  <div class="nav-mobile">
+    <ul>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="testimonials.html">Kind Words</a></li>
+      <li><a href="work-with-me.html">Work With Me</a></li>
+    </ul>
+  </div>
 </nav>
-<div class="mobile-menu" id="mobileMenu">
-  <ul>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="testimonials.html">Kind Words</a></li>
-    <li><a href="work-with-me.html" class="nav-cta">Work With Me</a></li>
-  </ul>
-</div>
 
-<!-- PAGE HERO -->
 <section class="page-hero">
   <div class="container">
     <h1>About Lynne</h1>
@@ -40,7 +41,6 @@
   </div>
 </section>
 
-<!-- MAIN ABOUT -->
 <section class="about-full">
   <div class="container">
     <div class="about-full-inner">
@@ -49,26 +49,26 @@
       </div>
       <div class="about-full-text">
         <h2>The woman behind the agency</h2>
-        <p>I'm Lynne Wilson — founder of Lynne Wilson & Co., OBM, fractional marketing director, social media strategist, email marketer, podcast producer and yoga nidra guide.</p>
+        <p>I'm Lynne Wilson — founder of Lynne Wilson &amp; Co., OBM, fractional marketing director, social media strategist, email marketer, podcast producer and yoga nidra guide.</p>
         <p>That's a long list, and it's intentional. Because the women I work with don't have one problem — they have many. They're running businesses they love, wearing every hat, and somewhere between the strategy sessions and the school run, the marketing has quietly fallen off the list.</p>
         <p>I've spent years of experience inside businesses of all shapes and sizes, watching brilliant women get buried under the operational weight of their own success. I know what it looks like when a business is thriving on the outside and quietly chaos on the inside.</p>
         <p>That's exactly where I come in.</p>
-        <p>I bring calm to the chaos. I take the things that are falling through the gaps — the emails not going out, the social content not getting made, the strategy that lives in your head but never makes it onto a page — and I actually do them.</p>
-        <p class="mission-line">Women-led businesses deserve women-led support. That's not a tagline. It's why this agency exists.</p>
-        <p class="about-statement">I bring calm to the chaos. In your business and in your nervous system.</p>
+        <p>Throughout my career I've worked with many women business owners and one thing is certain — we're all superstars, but it's ok to ask for help.</p>
+        <p>We're out there running businesses, doing the school run, keeping house and making sure everyone else is ok, that we often forget about ourselves.</p>
+        <p>I created Lynne Wilson &amp; Co. to support the women-owned small business, so that she gets support not just in her business, but with her nervous system and stress levels too.</p>
+        <p class="mission-line"><strong>Women-led businesses deserve women-led support. That's not a tagline. It's why this agency exists.</strong></p>
+        <p class="about-statement">I bring calm to the chaos.<br /><em>In your business and in your nervous system.</em></p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- QUOTE BREAK -->
-<section class="quote-break sage">
+<section class="quote-break quote-break--sage">
   <div class="container">
-    <blockquote>"You know you need a strategy. You know you need support. But finding the right people feels like yet another thing on a list that's already too long."</blockquote>
+    <blockquote>You know you need a strategy. You know you need support. But finding the right people feels like yet another thing on a list that's already too long.</blockquote>
   </div>
 </section>
 
-<!-- VALUES -->
 <section class="about-values">
   <div class="container">
     <h2>What I believe in</h2>
@@ -101,7 +101,6 @@
   </div>
 </section>
 
-<!-- YOGA NIDRA -->
 <section class="yoga-nidra">
   <div class="container">
     <div class="yoga-inner">
@@ -111,37 +110,35 @@
         <p>It's not meditation in the traditional sense. It's more accessible, more immediately effective and — for busy women who can't switch off — often transformative.</p>
         <p>I offer bespoke yoga nidra sessions for individual clients, teams and retreats. Each session is crafted specifically for the group or person I'm working with.</p>
         <p>Business performance and personal wellbeing are not separate conversations. I believe in supporting both.</p>
-        <a href="work-with-me.html" class="btn btn-dark" style="margin-top:1.5rem; display:inline-block;">Book a Session</a>
+        <a href="work-with-me.html" class="btn btn-primary" style="margin-top:1.5rem; display:inline-block;">Book a Session</a>
       </div>
-      <div class="yoga-image">
+      <div class="yoga-panel">
         <blockquote>"Such a nourishing, restorative experience. Within minutes, she transformed my overwhelm into peace."</blockquote>
-        <p style="color:rgba(255,255,255,0.7); font-size:0.82rem; margin-top:1.5rem; font-style:normal;">— Jennifer Kuhl</p>
+        <p class="attribution">— Jennifer Kuhl, Mindfulness &amp; Psychology-Trained Guide</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<section class="final-cta">
+<section class="inner-cta">
   <div class="container">
     <h2>Ready to hand some of it over?</h2>
     <p>Let's have a conversation about what support could look like for your business.</p>
-    <div class="cta-buttons">
-      <a href="https://calendly.com/lynne-lynnewilson/30min" target="_blank" class="btn btn-dark">Book a Discovery Call</a>
+    <div class="inner-cta-buttons">
+      <a href="https://calendly.com/lynne-lynnewilson/30min" target="_blank" class="btn btn-primary">Book a Discovery Call</a>
       <a href="mailto:lynne@lynnewilson.uk" class="email-link">lynne@lynnewilson.uk</a>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
+<footer class="footer">
   <div class="container">
     <div class="footer-inner">
-      <div>
-        <div class="footer-logo">Lynne Wilson & Co.</div>
-        <p class="footer-tagline">Helping women in business lead without burning out.</p>
+      <div class="footer-brand">
+        <a href="index.html" class="logo">Lynne Wilson <span>&amp; Co.</span></a>
+        <p>Marketing, VA Support, OBM &amp; Podcast Support<br />for Women-Led Businesses</p>
       </div>
-      <div>
+      <div class="footer-links">
         <h4>Navigate</h4>
         <ul>
           <li><a href="services.html">Services</a></li>
@@ -150,27 +147,26 @@
           <li><a href="work-with-me.html">Work With Me</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Get in Touch</h4>
-        <ul>
-          <li><a href="mailto:lynne@lynnewilson.uk">lynne@lynnewilson.uk</a></li>
-          <li><a href="https://calendly.com/lynne-lynnewilson/30min" target="_blank">Book a discovery call</a></li>
-          <li><a href="https://linkedin.com/in/lynnewilson" target="_blank">LinkedIn</a></li>
-          <li><a href="https://instagram.com/lynnewilsonco" target="_blank">Instagram</a></li>
-        </ul>
+      <div class="footer-contact">
+        <h4>Get In Touch</h4>
+        <a href="mailto:lynne@lynnewilson.uk">lynne@lynnewilson.uk</a>
+        <a href="https://calendly.com/lynne-lynnewilson/30min" target="_blank" class="btn btn-primary btn-small">Book a Call</a>
+        <div class="footer-social">
+          <a href="https://linkedin.com/in/lynnewilson" target="_blank">LinkedIn</a>
+          <a href="https://instagram.com/lynnewilsonco" target="_blank">Instagram</a>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 Lynne Wilson & Co. All rights reserved.</span>
-      <span>Women-led businesses only.</span>
+      <p>&copy; 2026 Lynne Wilson &amp; Co. All rights reserved. | Women-led businesses only.</p>
     </div>
   </div>
 </footer>
 
 <script>
-function toggleMenu() {
-  document.getElementById('mobileMenu').classList.toggle('open');
-}
+  const toggle = document.querySelector('.nav-toggle');
+  const mobileNav = document.querySelector('.nav-mobile');
+  toggle.addEventListener('click', () => mobileNav.classList.toggle('open'));
 </script>
 </body>
 </html>
