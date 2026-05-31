@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Marketing, VA support, OBM and podcast support exclusively for women-led businesses. Helping women in business lead without burning out.">
+  <title>Lynne Wilson & Co. | Marketing, OBM & Podcast Support for Women in Business</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #FAF8F5;
+      --green: #2D3F3A;
+      --sage: #7A9188;
+      --gold: #C4A882;
+      --charcoal: #2A2A2A;
+      --light-sage: #EEF3F1;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Montserrat', sans-serif; background: var(--cream); color: var(--charcoal); font-size: 16px; line-height: 1.7; }
+
+    /* NAV */
+    nav { background: var(--cream); border-bottom: 1px solid rgba(45,63,58,0.1); padding: 1.1rem 3rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--green); text-decoration: none; letter-spacing: 0.03em; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.72rem; color: var(--green); text-decoration: none; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; }
+    .nav-links a:hover { color: var(--sage); }
+    .nav-cta { background: var(--green); color: var(--cream); font-family: 'Montserrat', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.65rem 1.4rem; border: none; cursor: pointer; text-decoration: none; display: inline-block; }
+    .nav-cta:hover { background: var(--sage); }
+    .nav-mobile-toggle { display: none; background: none; border: none; cursor: pointer; }
+    .nav-mobile-toggle span { display: block; width: 22px; height: 2px; background: var(--green); margin: 5px 0; }
+
+    /* HERO */
+    .hero { background: var(--green); min-height: 88vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; position: relative; overflow: hidden; }
+    .hero-grid-bg { position: absolute; inset: 0; opacity: 0.04; background-image: repeating-linear-gradient(0deg, transparent, transparent 50px, var(--gold) 50px, var(--gold) 51px), repeating-linear-gradient(90deg, transparent, transparent 50px, var(--gold) 50px, var(--gold) 51px); }
+    .hero-content { padding: 6rem 4rem 6rem 3rem; position: relative; z-index: 2; }
+    .hero-eyebrow { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 4vw, 3.4rem); color: var(--cream); line-height: 1.2; font-weight: 400; margin-bottom: 1.2rem; }
+    .hero h1 em { font-style: italic; color: var(--gold); }
+    .hero-sub { font-size: 0.95rem; color: rgba(250,248,245,0.72); line-height: 1.9; margin-bottom: 2.5rem; font-weight: 300; }
+    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .hero-image { height: 88vh; position: relative; overflow: hidden; }
+    .hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center top; opacity: 0.75; }
+    .hero-image-overlay { position: absolute; inset: 0; background: linear-gradient(to right, var(--green) 0%, transparent 40%); }
+    .btn-gold { background: var(--gold); color: var(--green); font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 1rem 2rem; border: none; cursor: pointer; text-decoration: none; display: inline-block; }
+    .btn-gold:hover { background: #d4bb97; }
+    .btn-outline-cream { background: transparent; color: var(--cream); font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 1rem 2rem; border: 1px solid rgba(250,248,245,0.3); cursor: pointer; text-decoration: none; display: inline-block; }
+
+    /* TICKER */
+    .ticker { background: var(--gold); padding: 0.8rem 0; overflow: hidden; white-space: nowrap; }
+    .ticker-track { display: inline-flex; animation: ticker 35s linear infinite; }
+    .ticker-track span { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--green); padding: 0 2.5rem; }
+    .ticker-track span::after { content: '·'; margin-left: 2.5rem; }
+    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* SHARED */
+    .section-label { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.8rem; }
+    .section-label--gold { color: var(--gold); }
+    h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.9rem, 3.5vw, 2.7rem); color: var(--green); font-weight: 400; line-height: 1.22; margin-bottom: 1rem; }
+    h2 em { font-style: italic; color: var(--sage); }
+    h2.on-dark { color: var(--cream); }
+    h2.on-dark em { color: var(--gold); }
+
+    /* PLATE */
+    .plate-section { padding: 5.5rem 3rem; background: var(--cream); }
+    .plate-header { text-align: center; max-width: 700px; margin: 0 auto 3rem; }
+    .plate-header p { font-size: 0.95rem; color: #555; line-height: 1.9; font-weight: 300; margin-top: 0.8rem; }
+    .plate-grid { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid rgba(45,63,58,0.12); }
+    .plate-item { padding: 1.6rem 1.8rem; border-bottom: 1px solid rgba(45,63,58,0.1); border-right: 1px solid rgba(45,63,58,0.1); display: flex; align-items: flex-start; gap: 1rem; }
+    .plate-item:nth-child(2n) { border-right: none; }
+    .plate-item:nth-last-child(-n+2) { border-bottom: none; }
+    .plate-tick { width: 24px; height: 24px; background: var(--green); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; color: var(--gold); font-size: 11px; font-weight: 700; }
+    .plate-text strong { display: block; font-size: 0.88rem; font-weight: 600; color: var(--green); margin-bottom: 0.2rem; }
+    .plate-text span { font-size: 0.82rem; color: #666; font-weight: 300; line-height: 1.6; }
+
+    /* PAIN POINT */
+    .pain-section { background: var(--sage); display: grid; grid-template-columns: 1fr 1fr; align-items: center; }
+    .pain-image { overflow: hidden; position: relative; }
+    .pain-image img { width: 100%; height: 340px; object-fit: cover; object-position: center 20%; display: block; }
+    .pain-image::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, transparent 55%, #7A9188 100%); }
+    .pain-content { padding: 3.5rem; }
+    .pain-quote { font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(1.3rem, 2.5vw, 1.8rem); color: var(--cream); line-height: 1.55; font-weight: 400; }
+
+    /* FOR YOU */
+    .for-you-section { background: var(--green); padding: 5.5rem 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    .for-you-label { font-size: 1rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; }
+    .for-you-list { list-style: none; display: flex; flex-direction: column; gap: 1.1rem; }
+    .for-you-list li { color: rgba(250,248,245,0.85); font-size: 0.93rem; font-weight: 300; line-height: 1.75; padding-left: 1.6rem; position: relative; }
+    .for-you-list li::before { content: '→'; position: absolute; left: 0; color: var(--gold); font-weight: 600; }
+    .for-you-right { position: relative; padding: 12px; }
+    .for-you-right::before { content: ''; position: absolute; inset: 0; border: 2px solid var(--gold); }
+    .for-you-right img { width: 100%; height: 480px; object-fit: cover; object-position: center top; display: block; position: relative; z-index: 1; }
+
+    /* SERVICES */
+    .services-section { padding: 5.5rem 3rem; background: var(--cream); }
+    .services-header { margin-bottom: 3rem; text-align: center; }
+    .services-header p { font-size: 0.95rem; color: #555; line-height: 1.9; font-weight: 300; margin-top: 0.8rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .service-card { background: #fff; border: 1px solid rgba(45,63,58,0.12); border-top: 4px solid var(--green); padding: 2.2rem 1.8rem 2rem; text-decoration: none; display: block; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .service-card:hover { transform: translateY(-5px); box-shadow: 0 16px 48px rgba(45,63,58,0.1); }
+    .service-card--sage { border-top-color: var(--sage); }
+    .service-card--gold { border-top-color: var(--gold); }
+    .service-icon { width: 44px; height: 44px; background: var(--light-sage); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.3rem; font-size: 1.2rem; }
+    .service-card h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--green); font-weight: 600; margin-bottom: 0.8rem; line-height: 1.3; }
+    .service-card p { font-size: 0.83rem; color: #666; line-height: 1.8; margin-bottom: 1.5rem; font-weight: 300; }
+    .service-link { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green); }
+    .service-card--sage .service-link { color: var(--sage); }
+    .service-card--gold .service-link { color: #a8824e; }
+
+    /* HOW IT WORKS */
+    .how-section { background: #F0EDE6; padding: 5.5rem 3rem; }
+    .steps { display: flex; gap: 2rem; margin-top: 3.5rem; position: relative; }
+    .steps::before { content: ''; position: absolute; top: 28px; left: 56px; right: 56px; height: 1px; background: rgba(45,63,58,0.18); }
+    .step { flex: 1; text-align: center; }
+    .step-num { width: 56px; height: 56px; background: var(--green); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; color: var(--gold); font-family: 'Playfair Display', serif; font-size: 1.3rem; position: relative; z-index: 2; }
+    .step h4 { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--green); font-weight: 600; margin-bottom: 0.6rem; }
+    .step p { font-size: 0.82rem; color: #666; line-height: 1.75; font-weight: 300; }
+
+    /* CASE STUDY */
+    .case-section { background: var(--cream); padding: 5.5rem 3rem; }
+    .case-inner { background: var(--green); padding: 3.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; }
+    .case-label { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .case-inner h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--cream); font-weight: 400; margin-bottom: 1rem; line-height: 1.3; }
+    .case-desc { font-size: 0.85rem; color: rgba(250,248,245,0.72); line-height: 1.85; font-weight: 300; margin-bottom: 2rem; }
+    .case-quote { border-left: 2px solid var(--gold); padding-left: 1.8rem; }
+    .case-quote blockquote { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1rem; color: rgba(250,248,245,0.88); line-height: 1.8; margin-bottom: 1.2rem; }
+    .case-quote cite { font-size: 0.72rem; color: rgba(250,248,245,0.5); font-style: normal; text-transform: uppercase; letter-spacing: 0.1em; }
+
+    /* PHOTO STRIP */
+    .photo-strip { display: grid; grid-template-columns: repeat(3, 1fr); }
+    .photo-strip img { width: 100%; height: 280px; object-fit: cover; object-position: center 20%; display: block; }
+
+    /* COUNTER */
+    .counter-section { background: var(--green); padding: 5rem 3rem; text-align: center; }
+    .counter-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 3rem; }
+    .counter-num { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--gold); line-height: 1; margin-bottom: 0.5rem; }
+    .counter-label { font-size: 0.78rem; color: rgba(250,248,245,0.6); font-weight: 300; line-height: 1.5; }
+
+    /* TESTIMONIALS */
+    .testimonials-section { background: var(--light-sage); padding: 5.5rem 3rem; }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+    .testimonial-card { background: #fff; padding: 2rem; border-left: 3px solid var(--gold); }
+    .testimonial-card blockquote { font-size: 0.85rem; color: #444; line-height: 1.85; font-weight: 300; font-style: italic; margin-bottom: 1.2rem; }
+    .testimonial-card cite { font-size: 0.72rem; font-weight: 700; color: var(--green); font-style: normal; text-transform: uppercase; letter-spacing: 0.08em; }
+    .testimonial-card cite span { display: block; font-weight: 300; color: var(--sage); text-transform: none; letter-spacing: 0; margin-top: 0.15rem; }
+
+    /* CTA */
+    .cta-section { background: var(--gold); padding: 6rem 3rem; text-align: center; }
+    .cta-section h2 { color: var(--green); margin-bottom: 1rem; }
+    .cta-section p { font-size: 0.95rem; color: rgba(45,63,58,0.72); font-weight: 300; line-height: 1.85; max-width: 480px; margin: 0 auto 2.5rem; }
+    .btn-dark { background: var(--green); color: var(--cream); font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 1rem 2.5rem; border: none; cursor: pointer; text-decoration: none; display: inline-block; }
+    .btn-dark:hover { background: #1e2e2a; }
+    .cta-email { display: block; margin-top: 1.2rem; font-size: 0.8rem; color: rgba(45,63,58,0.6); text-decoration: none; }
+
+    /* FOOTER */
+    footer { background: var(--green); padding: 3rem; }
+    .footer-inner { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 2.5rem; }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--cream); margin-bottom: 0.8rem; }
+    .footer-tagline { font-size: 0.78rem; color: rgba(250,248,245,0.5); font-weight: 300; line-height: 1.7; max-width: 260px; }
+    .footer-col h4 { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .footer-col ul li a { font-size: 0.8rem; color: rgba(250,248,245,0.6); text-decoration: none; font-weight: 300; }
+    .footer-col ul li a:hover { color: var(--cream); }
+    .footer-bottom { border-top: 1px solid rgba(250,248,245,0.1); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; }
+    .footer-bottom p { font-size: 0.72rem; color: rgba(250,248,245,0.35); font-weight: 300; }
+    .footer-social { display: flex; gap: 1.5rem; }
+    .footer-social a { font-size: 0.68rem; color: rgba(250,248,245,0.45); text-decoration: none; text-transform: uppercase; letter-spacing: 0.1em; }
+    .footer-social a:hover { color: var(--cream); }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .nav-mobile-toggle { display: block; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 60px; left: 0; right: 0; background: var(--cream); padding: 1.5rem; border-bottom: 1px solid rgba(45,63,58,0.1); gap: 1rem; z-index: 99; }
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-content { padding: 4rem 1.5rem; }
+      .hero-image { display: none; }
+      .plate-section, .services-section, .how-section, .case-section, .testimonials-section { padding: 4rem 1.5rem; }
+      .plate-grid { grid-template-columns: 1fr; }
+      .plate-item { border-right: none !important; }
+      .plate-item:last-child { border-bottom: none; }
+      .services-grid { grid-template-columns: 1fr; }
+      .steps { flex-direction: column; }
+      .steps::before { display: none; }
+      .step { text-align: left; display: flex; gap: 1.2rem; align-items: flex-start; }
+      .step-num { flex-shrink: 0; margin: 0; }
+      .case-inner { grid-template-columns: 1fr; padding: 2rem; gap: 2rem; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+      .counter-grid { grid-template-columns: repeat(2, 1fr); }
+      .photo-strip { grid-template-columns: 1fr; }
+      .photo-strip img { height: 260px; }
+      .pain-section { grid-template-columns: 1fr; }
+      .pain-content { padding: 2.5rem 1.5rem; }
+      .for-you-section { grid-template-columns: 1fr; gap: 2rem; padding: 4rem 1.5rem; }
+      .for-you-right { display: none; }
+      .cta-section { padding: 4rem 1.5rem; }
+      .counter-section { padding: 4rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Lynne Wilson & Co.</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="testimonials.html">Kind Words</a></li>
+      <li><a href="work-with-me.html">Work With Me</a></li>
+    </ul>
+    <button class="nav-mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="https://calendly.com/lynne-lynnewilson/30min" class="nav-cta" target="_blank" rel="noopener">Book a Call</a>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Marketing · VA Support · OBM · Podcast Support</p>
+      <h1>You're brilliant at what you do.<br><em>You just can't get to it.</em></h1>
+      <p class="hero-sub">Marketing, VA support, OBM and podcast support for women-led businesses who are ready to stop running on empty and start leading from the front.</p>
+      <div class="hero-btns">
+        <a href="https://calendly.com/lynne-lynnewilson/30min" class="btn-gold" target="_blank" rel="noopener">Book a Free Discovery Call</a>
+        <a href="#services" class="btn-outline-cream">See How I Can Help</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="lynne.jpg" alt="Lynne Wilson, founder of Lynne Wilson & Co.">
+      <div class="hero-image-overlay"></div>
+    </div>
+  </div>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>700% social media growth</span><span>20+ years marketing experience</span><span>Podcast launch to live in weeks</span><span>Women-led businesses only</span><span>Real strategy, not just posting</span><span>From chaos to clarity</span><span>Email marketing that actually converts</span><span>OBM support that scales with you</span><span>700% social media growth</span><span>20+ years marketing experience</span><span>Podcast launch to live in weeks</span><span>Women-led businesses only</span><span>Real strategy, not just posting</span><span>From chaos to clarity</span><span>Email marketing that actually converts</span><span>OBM support that scales with you</span>
+    </div>
+  </div>
+
+  <section class="plate-section">
+    <div class="plate-header">
+      <p class="section-label">What we take off your plate</p>
+      <h2>The things that eat your time<br><em>and follow you into the evening</em></h2>
+      <p>You did not start your business to spend your days buried in admin and content planning. But here you are. This is the stuff we take on so you can get back to the work only you can do.</p>
+    </div>
+    <div class="plate-grid">
+      <div class="plate-item">
+        <div class="plate-tick">&#10003;</div>
+        <div class="plate-text"><strong>The inbox that never empties</strong><span>Emails, enquiries, scheduling. Handled.</span></div>
+      </div>
+      <div class="plate-item">
+        <div class="plate-tick">&#10003;</div>
+        <div class="plate-text"><strong>Social media that never gets done</strong><span>Strategy, captions, scheduling. All of it.</span></div>
+      </div>
+      <div class="plate-item">
+        <div class="plate-tick">&#10003;</div>
+        <div class="plate-text"><strong>The podcast sitting unedited</strong><span>From recording to published, we produce it.</span></div>
+      </div>
+      <div class="plate-item">
+        <div class="plate-tick">&#10003;</div>
+        <div class="plate-text"><strong>A marketing strategy stuck in your head</strong><span>We get it out of your head and into action.</span></div>
+      </div>
+      <div class="plate-item">
+        <div class="plate-tick">&#10003;</div>
+        <div class="plate-text"><strong>The admin no one else sees</strong><span>Behind-the-scenes operations, sorted.</span></div>
+      </div>
+      <div class="plate-item">
+        <div class="plate-tick">&#10003;</div>
+        <div class="plate-text"><strong>Marketing happening reactively</strong><span>Finally proactive, planned and consistent.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="pain-section">
+    <div class="pain-image">
+      <img src="lynne2.jpg" alt="Lynne Wilson">
+    </div>
+    <div class="pain-content">
+      <p class="pain-quote">"You know exactly what your business needs. You just cannot get to it because you are too busy keeping everything afloat. That is exactly where I come in."</p>
+    </div>
+  </div>
+
+  <section class="for-you-section">
+    <div class="for-you-left">
+      <p class="for-you-label">This is for you if...</p>
+      <h2 class="on-dark" style="margin-bottom:2rem;">You have built something real.<br><em>Now it is time to lead it.</em></h2>
+      <ul class="for-you-list">
+        <li>You are running a brilliant business but you are buried in the doing of it</li>
+        <li>You have hit a ceiling and you know proper support is the only way through it</li>
+        <li>You want someone who actually understands marketing, not just someone who can post</li>
+        <li>You are done with freelancers who need constant briefing and constant chasing</li>
+        <li>You want to work fewer hours and get more done, and you know it is possible</li>
+        <li>You want to lead your business, not just survive it</li>
+      </ul>
+    </div>
+    <div class="for-you-right">
+      <img src="lynne-foryou.jpg" alt="Lynne Wilson">
+    </div>
+  </section>
+
+  <section class="services-section" id="services">
+    <div class="services-header">
+      <p class="section-label">Services</p>
+      <h2>Choose where you need<br><em>the most support right now</em></h2>
+      <p>Every client is different. Whether you need someone in your back office, someone to run your social media properly, or a senior marketing brain, there is a way to work together that fits where you are right now.</p>
+    </div>
+    <div class="services-grid">
+      <a href="services.html#obm" class="service-card">
+        <div class="service-icon">&#128218;</div>
+        <h3>VA &amp; OBM Support</h3>
+        <p>From inbox management and diary scheduling right through to running your business back-end, managing your team and overseeing launches. The right-hand person you have been looking for.</p>
+        <span class="service-link">Find out more &#8594;</span>
+      </a>
+      <a href="services.html#social" class="service-card service-card--sage">
+        <div class="service-icon">&#128241;</div>
+        <h3>Social Media Packages</h3>
+        <p>Strategy always by Lynne. Execution by a vetted team. From a one-off audit to full monthly management, content, captions, scheduling and reporting done properly.</p>
+        <span class="service-link">Find out more &#8594;</span>
+      </a>
+      <a href="services.html#marketing" class="service-card service-card--gold">
+        <div class="service-icon">&#127919;</div>
+        <h3>Strategy &amp; Marketing Management</h3>
+        <p>Senior marketing expertise for your business. Campaign planning, email marketing, podcast production, analytics and board-level reporting, delivered by Lynne directly.</p>
+        <span class="service-link">Find out more &#8594;</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="how-section">
+    <p class="section-label">How it works</p>
+    <h2>Simple. Straightforward.<br><em>No faff.</em></h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div><h4>Book a free call</h4><p>30 minutes. No pitch, no pressure. Just a proper conversation about where you are and what you need.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div><h4>We build your plan</h4><p>Together we work out exactly what support makes sense for your business right now. Nothing more, nothing less.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div><h4>Hand it over</h4><p>We get on with it. You get on with leading. That is the whole idea.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <p class="section-label">Client story</p>
+    <h2>See it in action</h2>
+    <div class="case-inner">
+      <div>
+        <p class="case-label">Case Study: Goody Granola</p>
+        <h3>From invisible to converting with strategy and email marketing that actually worked</h3>
+        <p class="case-desc">Goody Granola had a brilliant product but their email marketing was not working and their Instagram was not reflecting the quality of what they made. Lynne analysed their Shopify data, rebuilt their email flows and created an Instagram strategy that started generating real sales.</p>
+      </div>
+      <div class="case-quote">
+        <blockquote>"Lynne brilliantly analysed my Shopify website emails and Instagram analytics. She created and executed a fantastic Instagram plan and updated my existing emails and brilliantly created more which have already generated sales. If you are lucky enough to get the chance to work with Lynne, grab that opportunity quickly before she gets booked up."</blockquote>
+        <cite>Beth Salem, Founder, Goody Granola</cite>
+      </div>
+    </div>
+  </section>
+
+  <div class="photo-strip">
+    <img src="lynne-staverton.jpg" alt="Lynne Wilson">
+    <img src="lynne-london.jpg" alt="Lynne Wilson in London">
+    <img src="lynne-beach.jpg" alt="Lynne Wilson">
+  </div>
+
+  <section class="counter-section">
+    <p class="section-label section-label--gold">The difference it makes</p>
+    <h2 class="on-dark">What would you do with<br><em>10 extra hours every week?</em></h2>
+    <div class="counter-grid">
+      <div><div class="counter-num" id="c1">0</div><div class="counter-label">Hours given back<br>to you every year</div></div>
+      <div><div class="counter-num" id="c2">0</div><div class="counter-label">Bedtime stories you<br>will not have to rush</div></div>
+      <div><div class="counter-num" id="c3">0</div><div class="counter-label">Weekends you can<br>actually switch off</div></div>
+      <div><div class="counter-num" id="c4">0</div><div class="counter-label">Holiday where you<br>leave work at home</div></div>
+    </div>
+  </section>
+
+  <section class="testimonials-section">
+    <p class="section-label">Kind words</p>
+    <h2>What clients say</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <blockquote>"I recommend working with Lynne to support the administrative operation of projects. Lynne has been a great help to me within the events industry reacting quickly to last minute requirements. The best thing for me has been that it is very simple and easy to work with Lynne, no barriers in the way of progress. Highly committed and reliable."</blockquote>
+        <cite>Mandi Hales<span>Automotive Brand Activation Solutions</span></cite>
+      </div>
+      <div class="testimonial-card">
+        <blockquote>"The impact Lynne made was exceptional. She built an amazing rapport with the client, developed a clear marketing plan, introduced innovative ideas and completely refreshed their email funnel resulting in increased sales. What truly stood out was how much value Lynne delivered consistently, going above and beyond with genuine passion and care for the client's success."</blockquote>
+        <cite>Tanya Mortley<span>Property Virtual Assistant &amp; Online Business Manager</span></cite>
+      </div>
+      <div class="testimonial-card">
+        <blockquote>"Lynne brilliantly analysed my Shopify website emails and Instagram analytics. Thanks to her analysis it was clear there is more potential for sales in my business from email marketing. She created and executed a fantastic Instagram plan and updated my existing emails which have already generated sales."</blockquote>
+        <cite>Beth Salem<span>Founder, Goody Granola</span></cite>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:2.5rem;">
+      <a href="testimonials.html" style="font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--green); text-decoration:none;">Read more kind words &#8594;</a>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Ready to stop doing<br>everything alone?</h2>
+    <p>Book a free 30-minute discovery call. No hard sell. No obligation. Just a proper conversation about your business and whether working together makes sense.</p>
+    <a href="https://calendly.com/lynne-lynnewilson/30min" class="btn-dark" target="_blank" rel="noopener">Book Your Free Discovery Call</a>
+    <a href="mailto:lynne@lynnewilson.uk" class="cta-email">Or email me directly: lynne@lynnewilson.uk</a>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">Lynne Wilson & Co.</div>
+        <p class="footer-tagline">Marketing, OBM and Podcast Support for Women-Led Businesses. Helping women lead without burning out.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="testimonials.html">Kind Words</a></li>
+          <li><a href="work-with-me.html">Work With Me</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get In Touch</h4>
+        <ul>
+          <li><a href="mailto:lynne@lynnewilson.uk">lynne@lynnewilson.uk</a></li>
+          <li><a href="https://calendly.com/lynne-lynnewilson/30min" target="_blank" rel="noopener">Book a Call</a></li>
+          <li><a href="https://linkedin.com/in/lynnewilson" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://instagram.com/lynnewilsonco" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&#169; 2026 Lynne Wilson & Co. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://linkedin.com/in/lynnewilson" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://instagram.com/lynnewilsonco" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function animateCounter(el, target, duration) {
+      let start = 0;
+      const increment = target / (duration / 16);
+      el.textContent = '0';
+      const timer = setInterval(() => {
+        start += increment;
+        if (start >= target) { el.textContent = target; clearInterval(timer); return; }
+        el.textContent = Math.floor(start);
+      }, 16);
+    }
+    let animated = false;
+    const counterSection = document.querySelector('.counter-section');
+    function checkVisible() {
+      if (animated || !counterSection) return;
+      const rect = counterSection.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        animated = true;
+        animateCounter(document.getElementById('c1'), 520, 2000);
+        animateCounter(document.getElementById('c2'), 365, 2000);
+        animateCounter(document.getElementById('c3'), 52, 2000);
+        animateCounter(document.getElementById('c4'), 1, 800);
+      }
+    }
+    window.addEventListener('scroll', checkVisible);
+    window.addEventListener('load', checkVisible);
+    setTimeout(checkVisible, 500);
+  </script>
+
+</body>
+</html>
