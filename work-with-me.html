@@ -429,9 +429,7 @@
       });
 
       if (response.ok) {
-        form.style.display = 'none';
-        document.getElementById('successMessage').style.display = 'block';
-        window.scrollTo({ top: document.getElementById('successMessage').offsetTop - 100, behavior: 'smooth' });
+        window.location.href = 'https://calendly.com/lynne-lynnewilson/30min';
       } else {
         alert('Something went wrong. Please email lynne@lynnewilson.uk directly.');
       }
